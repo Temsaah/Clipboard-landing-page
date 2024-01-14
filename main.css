@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+:root {
+  --clr-primary-strong-cyan: hsl(171, 66%, 44%);
+  --clr-primary-light-blue: hsl(233, 100%, 69%);
+
+  --clr-neutral-dark-grayish-blue: hsl(210, 10%, 33%);
+  --clr-neutral-grayish-blue: hsl(201, 11%, 66%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+main {
+  width: 90%;
+  margin-inline: auto;
+  display: grid;
+  gap: 8rem;
+}
+
+.main-view {
+  height: 100vh;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  color: var(--clr-neutral-dark-grayish-blue);
+  margin-bottom: 1rem;
+}
+
+section p {
+  color: var(--clr-neutral-grayish-blue);
+  font-size: 0.95rem;
+  padding-inline: 1.4rem;
+}
+
+.main-view h2,
+.download h2 {
+  font-size: 2rem;
+}
+
+.centered {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-block: auto;
+  text-align: center;
+}
+
+.downloads {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+}
+
+.main-view img {
+  max-width: 200px;
+}
+
+.btn {
+  border-radius: 2rem;
+  border: none;
+  padding: 1rem;
+}
+
+.mac {
+  background-color: var(--clr-primary-light-blue);
+  color: white;
+  font-weight: var(--fw-bold);
+  box-shadow: 2px 5px 4px -2px hsl(269.13deg 75.76% 38.61%);
+}
+
+.mac:hover {
+  cursor: pointer;
+  background-color: hsl(233deg 51.72% 72.58%);
+}
+
+.ios {
+  background-color: var(--clr-primary-strong-cyan);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 5px 9px -2px hsl(171deg 64.43% 15.89%);
+}
+
+.ios:hover {
+  cursor: pointer;
+  background-color: hsl(171deg 58.04% 53.44%);
+}
+
+.workflow-features > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workflow-features {
+  display: grid;
+  gap: 4rem;
+}
+
+.workflow-features h2 {
+  font-size: 1.6rem;
+}
+
+.workflow-features img {
+  margin-bottom: 2rem;
+}
+
+.companies {
+  gap: 5rem;
+}
+
+.download {
+  height: 100vh;
+}
+
+.features-info {
+  display: grid;
+  gap: 2rem;
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+footer img {
+  max-width: 50px;
+}
+
+footer nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--clr-neutral-dark-grayish-blue);
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  color: hsl(210deg 9.02% 55.16%);
+}
+
+footer .socials {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+footer .socials svg path {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+footer .socials a:hover path {
+  fill: var(--clr-neutral-grayish-blue);
+}
+
+@media (min-width: 800px) {
+  main {
+    width: 100%;
+  }
+
+  .container {
+    padding-inline: 10rem;
+  }
+
+  section .downloads {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 1rem 3rem;
+  }
+
+  section p {
+    padding: 0;
+    max-width: 57ch;
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .main-view h2,
+  .download h2 {
+    font-size: 2.2rem;
+  }
+
+  .grid {
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .features-info {
+    text-align: start;
+  }
+
+  .features-info p {
+    text-align: start;
+    max-width: 35ch;
+  }
+
+  .workflow-features {
+    display: flex;
+  }
+
+  .companies {
+    flex-direction: row;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 3rem !important;
+  }
+
+  footer img {
+    margin-right: 4rem;
+  }
+
+  footer nav {
+    margin-right: auto;
+  }
+
+  footer nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+
+  .socials {
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  footer nav ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  footer nav ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
